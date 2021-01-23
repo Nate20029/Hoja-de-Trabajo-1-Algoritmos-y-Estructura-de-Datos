@@ -58,3 +58,45 @@ public class RadioM implements RadioGeneral {
         }
 
     }
+    
+    
+    @Override
+    //Metodo para guardar las emisoras en los 12 botones
+    public boolean asignar(int num) {
+      numeros [num] = contador;
+      System.out.println("\n" + "Emisora guardada con éxito" + "\n");
+        
+        return false;
+    }
+
+    @Override
+    //Selecciona
+    public boolean emisoras(int num) {
+        for (int i = 1; i<13; i++){
+          System.out.println("\n" + numeros[i]);
+        }
+        contador = numeros[num];
+        System.out.println(" ");
+        System.out.println("Usted se encuentra en la emisora: " + contador + "\n");
+        
+        return false;
+    }
+
+    @Override
+    public void frecuencia() {
+       System.out.println("¿Que Modo Prefiere?");
+          System.out.println("1. AM");
+          System.out.println("2. FM");
+          op2 = scan.nextInt();
+          if (op2 == 1) {
+            // Si el Usuario elige la opcion de AM
+            System.out.println("Ahora esta en modo AM\n");
+            emisor = false;
+          
+          } else if (op2 == 2) {
+            // Si el usuario elige la opcion de FM
+            System.out.println("Ahora esta en modo FM\n");
+            emisor = true;
+          } 
+    }   
+}
