@@ -17,3 +17,17 @@ public interface RadioGeneral {
 
     // Método encargado de apagar la Radio
     public void apagar();
+    
+    //Aumenta el número de radio (Verificar si está en am o fm)
+    public void incrementar();
+    
+    //Método encargado de asignar a un espacio de una lista el número de Emisora selccionado
+    public boolean asignar(int num);
+    
+    //Mostrar la lista de Emisoras guardadas en la radio
+    public boolean emisoras(int num)
+        
+    //Cambiar entre am y fm
+    public void frecuencia();
+
+}
